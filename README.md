@@ -78,7 +78,7 @@ $ docker build -t pdf2code128 .
 $ docker run -p 8080:8080 -e SECRET_TOKEN=API_TOKEN_HERE pdf2code128
 ```
 
-Then you send pdf files to `localhost:8080/`
+Then you may send pdf files to `localhost:8080/`
 
 ## Send pdf to service via cURL
 ```bash
