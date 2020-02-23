@@ -22,8 +22,13 @@ async def hello(request: web.Request):
     return web.json_response(code_data_list)
 
 
+async def ping_handler(request: web.Request):
+    return web.Response(text='pong\n')
+
+
 app = web.Application(client_max_size=1024*1024*32)
 app.add_routes([web.post('/', hello)])
+app.add_routes([web.get('/ping', ping_handler)])
 
 
 if __name__ == '__main__':
